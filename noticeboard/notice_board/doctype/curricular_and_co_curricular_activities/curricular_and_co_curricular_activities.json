@@ -1,0 +1,102 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2023-10-03 14:14:09.413431",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "activity_type",
+  "start_date",
+  "end_date",
+  "name_of_event",
+  "brief_description_of_enents",
+  "no_of_students_participated",
+  "position",
+  "description_of_position_holders",
+  "attach_scanned_attendance_sheet_of_participants",
+  "attach_geotagged_photographs"
+ ],
+ "fields": [
+  {
+   "fieldname": "activity_type",
+   "fieldtype": "Select",
+   "label": "Activity type",
+   "options": "Curricular\nCo-curricular"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "name_of_event",
+   "fieldtype": "Data",
+   "label": "Name of Event"
+  },
+  {
+   "fieldname": "brief_description_of_enents",
+   "fieldtype": "Text Editor",
+   "label": "Brief Description of enents"
+  },
+  {
+   "fieldname": "no_of_students_participated",
+   "fieldtype": "Data",
+   "label": "No. of students participated"
+  },
+  {
+   "fieldname": "position",
+   "fieldtype": "Select",
+   "label": "Position",
+   "options": "\nFirst\nSecond\nThird"
+  },
+  {
+   "fieldname": "description_of_position_holders",
+   "fieldtype": "Text",
+   "label": "Description of position holders"
+  },
+  {
+   "fieldname": "attach_scanned_attendance_sheet_of_participants",
+   "fieldtype": "Attach",
+   "label": "Attach scanned attendance sheet of participants"
+  },
+  {
+   "fieldname": "attach_geotagged_photographs",
+   "fieldtype": "Attach",
+   "label": "Attach geotagged photographs"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-03 15:34:08.408165",
+ "modified_by": "Administrator",
+ "module": "Notice Board",
+ "name": "Curricular and Co-curricular Activities",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1
+}

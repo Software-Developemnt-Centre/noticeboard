@@ -1,6 +1,19 @@
 <div>
-	
-	<h3><a href="{{ doc.route }}">{{ doc.title or doc.name }}</a></h3>
+	<!-- code to get valuse User table -->
+	<!--
+	<div>
+    {% set users = frappe.get_all('User', fields=['username', 'user_image']) %}
+    {% for user in users %}
+    <div>
+<img src="{{ user.user_image }}" width="80px">
+<p> {{ user.username }}</p>
+</div>
+    {% endfor %}
+	</div>-->
+
+	<p>{{doc.owner}} {{doc.creation}}</p>
+
+	<p class="font-size-lg font-weight-bolder"><a href="{{ doc.route }}">{{ doc.title or doc.name }}</a></p>
 	<!--	<a class="font-size-lg" href="{{doc.route}}">{{doc.description}}</a>-->
 </div>
 <!-- this is a sample default list template -->
