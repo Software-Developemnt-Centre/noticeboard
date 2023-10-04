@@ -11,7 +11,7 @@
     {% endfor %}
 	</div>-->
 
-	<p>{{doc.owner}} {{frappe.format_date(doc.creation)}}</p>
+	<p>Created by: {{doc.owner}} {{frappe.format_date(doc.creation)}}  |  Updated by: {{doc.modified_by}} {{frappe.format_date(doc.modified)}}</p>
 
 	<p class="font-size-lg font-weight-bolder"><a href="{{ doc.route }}">{{ doc.title or doc.name }}</a></p>
 	<!--	<a class="font-size-lg" href="{{doc.route}}">{{doc.description}}</a>-->
