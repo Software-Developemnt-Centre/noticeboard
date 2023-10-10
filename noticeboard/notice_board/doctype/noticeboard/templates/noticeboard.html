@@ -1,8 +1,11 @@
 {% extends "templates/web.html" %}
 
+{% set owner_username = doc.owner %}
+{% set owner = frappe.get_doc('User', owner_username) %}
+
 {% block page_content %}
 <h1>NOTICE</h1>
-<h3>{{ title }}</h3>{{doc.owner}} | {{frappe.format_date(doc.creation)}} 
+<h3>{{ title }}</h3>{{owner.username}} | {{frappe.format_date(doc.creation)}} 
 <hr>
 <div>{{description}}</div>
 {% endblock %}
