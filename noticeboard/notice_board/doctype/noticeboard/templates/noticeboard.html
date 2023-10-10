@@ -1,8 +1,10 @@
 {% extends "templates/web.html" %}
 
 {% block page_content %}
-<h3>{{ title }}</h3>
-<div><strong>Description:</strong>{{description}}</div>
+<h1>NOTICE</h1>
+<h3>{{ title }}</h3>{{doc.owner}} | {{frappe.format_date(doc.creation)}} 
+<hr>
+<div>{{description}}</div>
 {% endblock %}
 
 <!-- this is a sample default web page template -->

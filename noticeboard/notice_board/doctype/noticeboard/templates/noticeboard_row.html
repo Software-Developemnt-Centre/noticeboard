@@ -1,4 +1,11 @@
-<div>
+{% block page_content %}
+{% set owner_username = doc.owner %}
+{% set owner = frappe.get_doc('User', owner_username) %}
+
+
+
+	
+
 	<!-- code to get valuse User table -->
 	<!--
 	<div>
@@ -10,10 +17,11 @@
 </div>
     {% endfor %}
 	</div>-->
+	<div>	
+		<p> {{ owner.username }}   <!--{{doc.owner}} -->{{frappe.format_date(doc.creation)}}  </p>
 
-	<p>Created by: {{doc.owner}} {{frappe.format_date(doc.creation)}}  |  Updated by: {{doc.modified_by}} {{frappe.format_date(doc.modified)}}</p>
-
-	<p class="font-size-lg font-weight-bolder"><a href="{{ doc.route }}">{{ doc.title or doc.name }}</a></p>
-	<!--	<a class="font-size-lg" href="{{doc.route}}">{{doc.description}}</a>-->
+	<p class="font-weight-bolder" style="font-size:30px;"><img src="{{ owner.user_image }}" width="80px"> <a href="{{ doc.route }}">{{ doc.title or doc.name }}</a></p>
+	<hr>
 </div>
+{% endblock %}
 <!-- this is a sample default list template -->
