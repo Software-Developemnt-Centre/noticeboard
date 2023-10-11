@@ -20,7 +20,7 @@
    "fieldname": "title",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Title",
+   "label": "Subject of the notice",
    "reqd": 1,
    "unique": 1
   },
@@ -28,7 +28,7 @@
    "fieldname": "description",
    "fieldtype": "Text Editor",
    "in_list_view": 1,
-   "label": "Description",
+   "label": "Body of the notice",
    "reqd": 1
   },
   {
@@ -53,7 +53,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2023-10-07 12:09:53.117489",
+ "modified": "2023-10-11 21:53:39.733525",
  "modified_by": "Administrator",
  "module": "Notice Board",
  "name": "notice",
@@ -88,6 +88,7 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
+ "title_field": "title",
  "track_changes": 1,
  "track_seen": 1,
  "website_search_field": "title"
