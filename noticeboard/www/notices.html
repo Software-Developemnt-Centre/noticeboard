@@ -1,0 +1,48 @@
+{% extends "templates/web.html" %}
+
+{% block title %}{{ _("About Us") }}{% endblock %}
+
+{% block page_content %}
+
+    <!-- Add some basic styling for better presentation -->
+    <style>
+        .notices-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .notice-card {
+            width: 30%; /* Adjust the width as needed */
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+    </style>
+
+    Agent is {{ name }}
+    The car is {{ car }}
+    {{ _("About Us") }}
+
+    <div>
+        We believe that great companies are driven by excellence,
+        and add value to both its customers and society.
+        You will find our team embodies these values.
+    </div>
+
+    <div class="notices-container">
+        {% if notices %}
+            {% for notice in notices %}
+                <div class="notice-card">
+                    <p>Notice Title: {{ notice.title }}</p>
+                    <p>Creation Date: {{ frappe.format_date(notice.creation) }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No notices found.</p>
+        {% endif %}
+    </div>
+
+{% endblock %}
+

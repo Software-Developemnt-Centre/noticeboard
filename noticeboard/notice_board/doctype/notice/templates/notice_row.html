@@ -2,26 +2,70 @@
 {% set owner_username = doc.owner %}
 {% set owner = frappe.get_doc('User', owner_username) %}
 
+<style>
+   /* notice_row.css */
 
+.notice-container {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-	
+.notice-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-	<!-- code to get valuse User table -->
-	<!--
-	<div>
-    {% set users = frappe.get_all('User', fields=['username', 'user_image']) %}
-    {% for user in users %}
-    <div>
-<img src="{{ user.user_image }}" width="80px">
-<p> {{ user.username }}</p>
+.notice-content {
+    margin-top: 15px;
+}
+
+.notice-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.notice-image {
+    width: 80px;
+    margin-right: 15px;
+    border-radius: 50%;
+}
+
+.notice-meta {
+    color: #555;
+}
+
+/* Style the "Read Notice" button */
+.notice-read-button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;  /* Add smooth transition for color change */
+}
+
+/* Change button color on hover */
+.notice-read-button:hover {
+    background-color: #e74c3c;  /* Change to red on hover */
+}
+
+</style>
+
+<div class="notice-container">
+    <div class="notice-header">
+        <p class="notice-meta">{{ owner.username }} - {{ frappe.format_date(doc.creation) }}</p>
+        <p class="notice-meta"><a href="{{ doc.route }}" class="notice-read-button">Read Notice</a></p>
+    </div>
+    <div class="notice-content">
+        <p class="notice-title font-weight-bolder"><img src="{{ owner.user_image }}" class="notice-image" alt="{{ owner.username }}"> {{ doc.title or doc.name }}</p>
+        <hr>
+    </div>
 </div>
-    {% endfor %}
-	</div>-->
-	<div>	
-		<p> {{ owner.username }}   <!--{{doc.owner}} -->{{frappe.format_date(doc.creation)}}  </p>
 
-	<p class="font-weight-bolder" style="font-size:30px;"><img src="{{ owner.user_image }}" width="80px"> <a href="{{ doc.route }}">{{ doc.title or doc.name }}</a></p>
-	<hr>
-</div>
 {% endblock %}
-<!-- this is a sample default list template -->
+
