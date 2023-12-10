@@ -19,7 +19,11 @@
   {
    "fieldname": "title",
    "fieldtype": "Data",
+   "in_filter": 1,
+   "in_global_search": 1,
    "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
    "label": "Subject of the notice",
    "reqd": 1,
    "unique": 1
@@ -27,7 +31,11 @@
   {
    "fieldname": "description",
    "fieldtype": "Text Editor",
+   "in_filter": 1,
+   "in_global_search": 1,
    "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
    "label": "Body of the notice",
    "reqd": 1
   },
@@ -53,7 +61,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2023-10-12 16:49:44.032256",
+ "modified": "2023-11-28 11:28:40.646342",
  "modified_by": "Administrator",
  "module": "Notice Board",
  "name": "notice",
@@ -85,7 +93,9 @@
   }
  ],
  "route": "noticeboard",
- "sort_field": "modified",
+ "search_fields": "title",
+ "show_name_in_global_search": 1,
+ "sort_field": "title",
  "sort_order": "DESC",
  "states": [],
  "track_changes": 1,

@@ -1,0 +1,32 @@
+/* notices.css */
+
+.notice-container {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.notice-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.notice-content {
+    margin-top: 10px;
+}
+
+.notice-title {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.notice-image {
+    width: 80px;
+    margin-right: 10px;
+}
+
+.notice-meta {
+    color: #555;
+}
+
